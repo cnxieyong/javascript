@@ -1,0 +1,171 @@
+/*---------------------------------------*\
+    @my-msg-header
+    @function: 我的消息
+      @author: zg
+  \*---------------------------------------*/
+	@mymsg-li-border: #eeeeee;
+	@mymsg-li-border: #f7f7f7;
+  @mymsg-little-dark:#666666;
+.nav-content-msg {
+  background-color: #eee;
+  border-bottom: 0;
+}
+
+.nav-content-msg .nav-content-list-msg {
+  text-align: left;
+  padding-left: 20px;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  .font(16);
+  border-right: 0;
+  border-bottom: 0;
+}
+.nav-content-list-msg{
+	a{
+		font-size: 18px;
+		color: @mymsg-little-dark;
+		b{
+			margin-left: 20px;
+			font-weight: normal;
+		}
+	}
+
+}
+.nav-content-text{
+	position: relative;
+	// padding-right: 25px;
+
+	
+}
+.set-position{
+	position: absolute;
+	left: 75px;
+	top:5px;
+}
+/*---------------------------------------*\
+    @my-msg-wrapper
+    @function: 我的消息
+      @author: zg
+  \*---------------------------------------*/	
+	.mymsg-wrapper{
+			.pagination{
+				// padding: 30px 0 40px;
+				 padding: 10px 0 20px;
+				 li{
+				 	  width: 40px;
+    				line-height: 40px;
+				 }
+			}
+			.msg-list{
+				padding: 0px 20px;
+				.without-msg{
+					margin-top: 40px;
+				}
+				li{
+					min-height: 40px;
+					padding: 15px 0px;
+					border-bottom: 1px solid @mymsg-li-border;
+					overflow: auto;
+
+					.mymsg-userimg{
+						height: 40px;
+						width: 40px;
+						margin: 0 10px;
+						float: left;
+						position: relative;
+						.msg-pic{
+							border-radius: 9999px;
+						    height: 40px;
+						    margin-left: -1px;
+						    vertical-align: middle;
+						    width: 40px;
+						}
+						.user-pic-over{
+							background: url("../images/small-over.png") no-repeat scroll 4px 2px;
+					    height: 50px;
+					    left: -10px;
+					    position: absolute;
+					    top: -7px;
+					    width: 50px;
+					    z-index: 9;
+						}
+
+					}
+
+					.mymsg-msg{
+						width: 92.4%;
+						float: right;
+						color: #000;
+						position: relative;
+						min-height: 40px;
+						.mymsg-msg-left{
+							width:83%;
+							float: left;
+							.mymsg-msg-left-p{
+								line-height: 16px;
+								font-size: 16px;
+								margin-bottom: 10px;
+								color: @font-color;
+							} 
+							
+							.mymsg-msg-left-span{
+								display: inline-block;
+								margin-bottom: 8px;
+								color: @font-light ;
+								line-height: 14px;
+								font-size: 14px;
+							}
+
+							.mymsg-msg-left-info{
+								line-height: 14px;
+								font-size: 14px;
+								color: @font-light;
+							}
+
+							span{
+								line-height: 14px;
+								font-size: 14px;
+								color: @mymsg-little-dark;
+							}
+
+							a{
+								color: @color-main-light;
+							}
+						}
+						.mymsg-msg-time{
+							width: 16.5%;
+							float: right;
+							.date{
+								color:@font-lighter;
+								font-size: 10px;
+								line-height: 10px;
+								text-align: right;
+							}
+							// .btn-delete{
+							// 	border: 1px solid @btn-main;
+						 //    border-radius: 5px;
+						 //    color: @btn-main;
+						 //    cursor: pointer;
+						 //    display: inline-block;
+						 //    font-size: 12px;
+						 //    height: 22px;
+						 //    line-height: 22px;
+						 //    padding: 0px 17px;
+						 //    position: absolute;
+						 //    right: 0;
+						 //    bottom: 0;
+						 //    &:hover{
+						 //    	background: @color-main;
+						 //    	color: @color-white;
+						 //    }
+							// }
+							
+						}
+					}		
+
+				}
+
+			}
+
+	}

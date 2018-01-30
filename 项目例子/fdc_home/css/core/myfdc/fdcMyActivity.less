@@ -1,0 +1,261 @@
+/*
+*我的活动
+*/ 
+@act-word-blue:#0095ff;
+
+@boxshadow : rgba(0,0,0,.1);
+
+.activecontainer{
+	width: 100%;
+	height: auto;
+	font-size: 14px;
+
+	/*活动*/
+	.containertab{
+		display:none;
+		padding-top: 20px;
+
+		.hasactive{
+			width:96%;
+			height:auto;
+			margin:0 auto;
+
+			/*活动列表*/
+			.activeli{
+				display:inline-block;
+				width:100%;
+				height:60px;
+				border:1px solid @color-gray;
+				padding:9px 0;
+				margin-bottom: 5px;
+				cursor: default;
+
+				// .activepic1{
+				// 	background:url('../images/myfdc/myactive/active1.png') no-repeat;	
+				// }
+				// .activepic2{
+				// 	background:url('../images/myfdc/myactive/active2.png') no-repeat;	
+				// }
+				// .activepic3{
+				// 	background:url('../images/myfdc/myactive/active3.png') no-repeat;	
+				// }
+				// .activepic4{
+				// 	background:url('../images/myfdc/myactive/active4.png') no-repeat;	
+				// }
+        
+				.activepic{
+					margin:0 10px;
+					width:120px;
+					height:60px;
+					overflow:hidden;
+				}
+				p{
+					margin-left: 10px;
+					line-height: 24px;
+				}
+				.statetel{
+					margin-top:8px;
+					.activestate{
+						color:@font-color;
+						margin-right:20px;
+					}
+
+					.date{
+						color:@font-light;
+						margin-right: 20px;
+					}
+
+					.tel{
+						color:@color-main;
+					}
+
+					.telnum{
+						color:@font-light;
+					}
+				}
+				.actcontent{
+					width:80%;
+					color:@font-lighter;
+					white-space:nowrap;
+					overflow:hidden;
+					text-overflow:ellipsis;
+				}
+
+				&:hover{
+					.shadow(2,2,5,@boxshadow);
+				}
+			}
+			
+			/*分页*/
+			.pagination{
+				padding: 30px 0 40px;
+			}
+		}
+		
+	}
+	.active{
+		display:block;
+	}
+	
+	/*活动推荐*/
+	.activeadvice{
+		width:96%;
+		height:auto;
+		margin:0 auto;
+		padding-top: 20px;
+		border-top: 1px solid lighten(@color-main,45%);
+    
+		p{
+			font-size: 15px;
+			color:@font-light;
+
+			i{
+				color:@color-default;
+			}
+		}
+		a{
+      cursor: default;
+    }
+		/*活动广告*/
+		.advertisement{
+			width:100%;
+			margin:20px auto 20px;
+
+			&:hover{
+					.shadow(2,2,5,@boxshadow);
+			}
+			img{ 
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+/*胖哥陪购*/
+@pangge-act-header:#cceaff;
+.singup-suc {
+  width: 117px;
+  height: 91px;
+  float: right;
+  margin: 7px 20px;
+  background: url("../images/myfdc/myactive/signup_suc.png") no-repeat center center;
+}
+
+.content-pane-bar{
+	a{
+	display: inline-block;
+	height: 40px;
+	width: 105px;
+	padding-left: 15px;
+	margin: 10px 0 10px 10px;
+	.radius(2px,2px,2px,2px);
+	background-color: @pangge-act-header;
+	text-align: center;
+	color: @act-word-blue;
+	}
+	line-height: 40px;
+	
+	font-size: 14px;
+	
+	color: #999;
+	clear: both;
+	.text-muted{
+		margin-right: 20px;
+	}
+}
+ul.activity{
+	font-size: 12px;
+	
+  @li-height: 100px;
+  @head-color: #99cbee;
+  @wait-color: #eeeeee;
+  margin: 0 50px 0 70px;
+  li{
+    position: relative;
+    margin: 10px 0;
+    display: table;
+    height: @li-height;
+    width: 100%;
+   
+    .item{
+      //display: table-cell;
+      padding-left: 80px;
+      //vertical-align: middle;
+      background-color: #ecf7ff;
+      height: 100px;
+      line-height: 100px;
+      .radius(15px,15px,15px,15px);
+      a{
+      	color: @act-word-blue;
+      }
+      p{
+        margin: 0;
+        line-height: 24px;
+        span{
+          margin-right: 50px;
+        }
+      }
+    }
+    .head{
+      position: absolute;
+      top: 0;
+      left: -@li-height / 2;
+      height: 100%;
+      width: @li-height ;
+      background: url("../images/myfdc/myactive/act-active1.png") no-repeat;
+      line-height: @li-height - 5;
+      text-align: center;
+      font-size: 16px;
+      color: @head-color;
+    }
+    &.wait{
+      background-color: @wait-color;
+      .head{
+        border-color: @wait-color;
+        color: #999999;
+        background: url("../images/myfdc/myactive/no-active1.png") no-repeat;
+      }
+      .item{
+      	background-color: #f1f1f1;
+        color: #999999;
+        border-radius: 15px;
+        //.radius(15px,15px,15px,15px);
+      }
+    }
+  }
+}
+
+.content-pane-header{
+	font-size: 16px;
+}
+.pangge-ad{
+  width: 100%;
+  height: 105px;
+  background: url("../images/myfdc/myactive/activity_pangge.png") no-repeat center center #ff3300;
+}
+
+.content-pane-header{
+	padding: 10px 0 10px 20px;
+	color: #666;
+	font-size: 16px;
+}
+.text-danger{
+	color: #f20;
+}
+
+.act-return{
+	background: url("../images/myfdc/myactive/return-act.png") no-repeat 5px 12px;
+}
+.act-phone{
+	img{
+		vertical-align: middle;
+	}
+}
+
+.text-muted{
+	color: #999;
+}
+.act-word-gray{
+	color: @font-light;
+}

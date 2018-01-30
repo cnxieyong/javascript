@@ -1,0 +1,220 @@
+
+@base-fontcolor1:#666666;
+@btn-backcolor:#0195ff;
+@btn-backcolor1:#cce6f7;
+
+
+input::-webkit-input-placeholder{
+  
+  color:(@base-fontcolor1 + #444444); 
+}
+input::-moz-placeholder{
+   
+ color:(@base-fontcolor1 + #444444); 
+}
+input:-ms-input-placeholder{
+   
+ color:(@base-fontcolor1 + #444444); 
+}
+
+
+.third-account{
+  
+}
+.main-header{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  color: @base-fontcolor1;
+  font-size: 18px;
+  background-color: @eee;
+}
+
+.third-account-content{
+  padding: 60px 0 60px 180px;
+  background-color: white;
+  font-size: 16px;
+
+  li{
+    position: relative;
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color:(@base-fontcolor1 - #333333); 
+  }
+  .account-bind{
+     background-image: url("../images/ico/bind-background.png");
+    background-repeat: no-repeat;
+  }
+  .account-wechat{
+    background-position: 0px -40px;
+  }
+  .account-blog{
+    background-position: 0px -80px;
+  }
+  
+  .no-account-bind{
+    color: #999;
+    background-image: url("../images/ico/nobind-background.png");
+    background-repeat: no-repeat;
+  }
+
+}
+
+.name-third-account{
+  padding: 0 10px 0 70px;
+  color: @base-fontcolor1;
+  font-weight: normal;
+}
+
+.arrow-bind{
+  position: absolute;
+  right: 200px;
+  // width: 80px;
+  // height: 40px;
+  // text-align: center;
+  // background-color:@btn-backcolor1;
+  // color:#017dd7;
+  // border: #fff;
+}
+
+  // .bind-state{
+  //   background-color:@btn-backcolor;
+  //   color: white;
+  // }
+
+.setpwd-content{
+  background-color: white;
+ 
+
+  input{
+    
+    margin-bottom: 10px;
+    width:290px;
+    height: 34px;
+    line-height: 34px; 
+    font-size: 14px;
+    text-indent: 10px;
+    color:(@base-fontcolor1 - #333333);
+
+  }
+}
+.first-div-pwd{
+  margin-top: 35px;
+}
+
+.setpwd-style{
+  display: inline-block;
+  margin-right: 10px;
+  width: 30%;
+  text-align: right;
+  font-size: 14px;
+
+}
+
+.difficulty-degree{
+  margin: 0px 0 15px 276px;
+  width:300px;
+  height: 15px;
+   
+  span{
+    display: none;
+    position: relative;
+    b{
+      margin: 0 10px 0 0;
+      color: #999;
+      font-size: 12px;
+    }
+  } 
+}
+
+  
+.test-same-pwd{
+ 
+  display: none;
+  color: red;
+  font-size: 14px;
+  padding-left: 10px;
+
+}
+
+.alert-pwd{
+  display: none;
+  height: 20px;
+  width: 20%;
+  margin-left: 5px;
+  color: (@base-fontcolor1 + #333333);
+  font-size: 14px;
+  background-image:url("../images/artReactor/alert-pwd.png"); 
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  line-height: 20px;
+
+}
+.allowd-pwd{
+  display : none;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  padding: 12px;
+  line-height: 20px;
+  background:url("../images/artReactor/allow-pwd.png") no-repeat 5px 0px; 
+}
+.hide-allow-pwd{
+  display: none;
+}
+
+
+.alert-redborder{
+  border-color: red;
+}
+
+
+.cancle-setpwd{
+  margin-left: 273px;
+}
+.setpwd-content button{
+  margin-right: 15px;
+  width: 135px;
+  height: 40px;
+  font-size: 14px;
+  .transition(background-color,.3s);
+}
+
+
+.capslock-alert{
+  display: none;
+  background-image: url("../images/artReactor/capslock-alert.png") ;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #999;
+  padding-left: 25px;
+}
+
+
+
+//登录成功页面
+.PStyle{
+  margin: 80px 0 30px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+.btn-login-a{
+  //display: inline-block;
+  text-align: center;
+  margin-left: 380px;
+  padding: 0 10px;
+}
+.pwd-fresh-time{
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+  span{
+    color: #f30;
+    padding: 0 5px;
+  }
+}

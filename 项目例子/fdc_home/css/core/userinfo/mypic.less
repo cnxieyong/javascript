@@ -1,0 +1,256 @@
+//我的面板的主题颜色
+@import url('core/variables.less');
+@import url('core/mixins.less');
+
+@panel-header-color:#F5F5F5;
+@panel-font-color:#666666;
+@panel-box-color:#f1f1f1;
+@panel-box-border:#e9e9e9;
+/*
+*
+* Date:2015-12-29
+* Person:zhangge
+* Main:picupload
+* 
+*/
+// .my-focus-content{
+//   background: @color-white;
+//   height: 500px;
+//   padding-top: 40px;
+//   padding-left: 155px;
+
+//   .my-focus-content-left{
+//       width: 300px;
+//       float: left;
+//       .my-focus-content-left-main{
+//         width: 300px;
+//         height: 300px;
+//         box-sizing: border-box;
+//         border: 1px solid @panel-box-border;
+//         background: @panel-box-color;
+//         text-align: center;
+//         .radius(3,3,3,3);
+//         .shadow(2,2,5,rgba(0,0,0,.1));
+//         p{
+//           position: relative;
+//           top: 130px;
+//           text-align: center;
+//           font-size: 12px;
+//           line-height: 12px;
+//           z-index: 999;
+//           color: @font-light;
+//         } 
+//         img{
+//           border: none;
+//         }
+//         .error{
+//           color: #ee4b4b;
+//           font-size: 14px;
+//           position: relative;
+//           top: 50px;
+//           border: none;
+//           display: none;
+//         }
+//         .sourceImg{width: 292px;height: 292px;}             
+//       }
+//       .btn-inputbox {
+          
+//           .inputstyle {
+//                 width: 160px;
+//                 height: 34px;
+//                 outline: medium none;
+//                 position: absolute;
+//                 filter: alpha(opacity=0);
+//                 -moz-opacity: 0;
+//                 opacity: 0;
+//                 left: 0px;
+//                 top: 0px;
+//                 cursor: pointer;
+//                 font-size: 34px;
+//           }
+//       }
+
+//       .my-focus-content-left-reup{
+//         margin-top: 30px;
+
+//         .my-focus-content-left-button{
+            
+//           }
+
+//           .btn-reupload{
+//           .reinput {
+//                 width: 100px;
+//                 height: 40px;
+//                 outline: medium none;
+//                 position: absolute;
+//                 font-size: 40px;
+//                 filter: alpha(opacity=0);
+//                 -moz-opacity: 0;
+//                 opacity: 0;
+//                 left: 0px;
+//                 top: 0px;
+//                 cursor: pointer;  
+//           }
+
+//         }
+
+//       }
+
+     
+//   }
+
+//   .my-focus-content-right{
+//     float: left;
+//     margin-left: 100px;
+//     font-size: 14px;
+//     .my-focus-content-right-span{
+//       color: @font-light;
+//       margin-bottom: 10px;
+//       display: inline-block;
+//     }
+//     .preview{
+//       font-size: 14px;
+//       position: relative;
+//       color: @font-lighter;
+//       .image-container{
+//         border: 1px solid @color-gray;
+//       }
+//       .preview-p{
+//         line-height: 14px;
+//       }
+     
+
+//       .pre-1{ width: 150px; height: 150px; overflow:hidden; }
+//       .pre-2{ width: 100px; height: 100px; overflow:hidden; margin-top: 13px; }
+//       .pre-3{ width: 80px; height: 80px; overflow:hidden;margin-top: 13px; }
+//     }
+//   }
+// }
+
+.my-focus-content{
+  background: @color-white;
+  height: 500px;
+  padding-top: 40px;
+  padding-left: 155px;
+  .my-focus-content-left{
+    width: 300px;
+    float: left;
+    .my-focus-content-left-main{
+      width: 300px;
+      height: 300px;
+      box-sizing: border-box;
+      border: 1px solid @panel-box-border;
+      background: @panel-box-color;
+      text-align: center;
+      .radius(3,3,3,3);
+      .shadow(2,2,5,rgba(0,0,0,.1));
+      p{
+        position: relative;
+        top: 160px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        z-index: 999;
+        color: @font-light;
+      } 
+      img{
+        border: none;
+      }
+      .error{
+        color: #ee4b4b;
+        font-size: 14px;
+        position: relative;
+        top: 50px;
+        border: none;
+        display: none;
+      }
+      .sourceImg{width: 292px;height: 292px;}             
+    }
+    // .btn-reupload{
+    .my-focus-content-left-reup{
+      position: relative;
+      height: auto;
+      overflow: hidden;
+      margin-top: 30px;
+      .btn-inputbox{
+        width: 100px;
+        height: 40px;
+        line-height: 37px;
+        margin: 0;
+        padding: 0;
+        color:darken(@color-main,10%);
+        background: lighten(@color-main, 40%);
+      }
+      .reinput {
+        width: 100%;
+        height: 40px;
+        // outline: medium none;
+        position: absolute;
+        font-size: 40px;
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        cursor: pointer;  
+      }
+    }
+    .upload-img{
+      top:-220px;
+      left: 70px;
+      display: inline-block;
+      .btn-submits{
+        display: none;
+      }
+      .btn-inputbox{
+        width: 160px;
+        height: 34px;
+        line-height: 34px;
+        color: @color-white;
+        background-color: @color-main;
+      }
+    }
+  }
+  .my-focus-content-right{
+    float: left;
+    margin-left: 100px;
+    font-size: 14px;
+    .my-focus-content-right-span{
+      color: @font-light;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .preview{
+      font-size: 14px;
+      position: relative;
+      color: @font-lighter;
+      .image-container{
+        border: 1px solid @color-gray;
+      }
+      .preview-p{
+        line-height: 14px;
+      }
+      .pre-1{ 
+        width: 150px; 
+        height: 150px; 
+        overflow:hidden; 
+      }
+      .pre-2{ 
+        width: 100px;
+        height: 100px; 
+        overflow:hidden;
+        margin-top: 13px;
+      }
+      .pre-3{ 
+        width: 80px; 
+        height: 80px; 
+        overflow:hidden;
+        margin-top: 13px; 
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,389 @@
+/*---------------------------------------*\
+    @my-focus-header
+    @function: 我的关注(活动)导航
+      @author: ccj
+  \*---------------------------------------*/
+  .my-focus-header {
+    .record-info {
+      padding: 10px 35px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 14px;
+      text-align: right;
+      .record-total,
+      .page-total {
+        padding: 0 3px;
+      }
+      .record-total {
+        color: @color-main;
+      }
+    }
+  }
+
+  /*---------------------------------------*\
+    @section-wrapper
+    @function: 我的关注(活动)主体内容
+      @author: ccj
+  \*---------------------------------------*/
+  .section-wrapper {
+    padding-bottom: 60px;
+    .build-box {      
+      padding: 30px 30px 12px;
+      border-top: 1px dashed @color-gray;
+      font-size: 0;
+      &:last-child {
+        border-bottom: 1px dashed @color-gray;
+      }
+      &:hover {
+        background-color: lighten(@color-gray, 10%);
+      }      
+      .build-img-box,
+      .build-info-box,
+      .build-operation-box {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        vertical-align: top;
+        font-size: 12px;
+      }
+      .build-img-box {
+        position: relative;
+        width: 26%;
+        height: 145px;
+      }
+      .build-info-box {
+        width: 48%;
+        height: 145px;
+        padding-left: 25px;
+        // overflow: hidden;
+      }
+      .build-operation-box {
+        width: 22%;
+      }
+    }
+    .without-msg{
+      background-position: 50% 10px;
+      height: 260px;
+    }
+  }
+      .build-img-box {
+        & a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .build-tag {
+          position: absolute;
+          top: 0;
+          left:0; 
+          width: 80px;
+          height: 25px;
+          line-height: 23px;
+          text-align: center;
+          font-size: 16px;
+          color: @color-white;
+          &.new {
+            background-color: @color-main;
+          }
+          &.second-hand {
+            background-color: @color-default;
+          }
+          &.rend {
+            background-color: blueviolet;
+          }
+          &.exclusive {
+            // mod shunzizhan 20160316
+            // top: 50%;
+            // left: 50%;
+            // margin-top: -15px;
+            // margin-left: -45px;
+            // // -webkit-transform: translate(-50%, -50%);
+            // //     -ms-transform: translate(-50%, -50%);
+            // //      -o-transform: translate(-50%, -50%);
+            // //         transform: translate(-50%, -50%);            
+            // display: block;
+            // width: 90px;
+            // height: 30px;
+            // line-height: 30px;
+            // padding: 0 10px;
+            // background-color: orangered;
+            // outline: 2px solid orangered;
+            // outline-offset: 5px; 
+            background-color: orangered;
+          }
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            left: 100%;
+          }
+          &:before {
+            top: 0;
+            border-bottom: 12.5px solid transparent;
+          }
+          &:after {
+            bottom: 0%;
+            border-top: 12.5px solid transparent;
+          }
+          &.new:before {
+            border-left: 12.5px solid @color-main;
+          }
+          &.new:after {
+            border-left: 12.5px solid @color-main;
+          }
+          &.second-hand:before {
+            border-left: 12.5px solid @color-default;
+          }
+          &.second-hand:after {
+            border-left: 12.5px solid @color-default;
+          }
+          &.rend:before {
+            border-left: 12.5px solid blueviolet;
+          }
+          &.rend:after {
+            border-left: 12.5px solid blueviolet;
+          }
+          &.exclusive:before {
+            border-left: 12.5px solid orangered;
+          }
+          &.exclusive:after {
+            border-left: 12.5px solid orangered;
+          }
+        }
+      }
+      .build-info-box {
+        .build-name {
+          margin-top: 5px;
+          font-size: 16px;
+          .district,
+          .acreage {
+            font-size: 12px;
+            color: @color-main;
+          }
+        }
+        .exclusive-content {
+          margin: 25px 0;
+          line-height: 20px;
+          color: gray;
+        }
+        .coupon {
+          margin: 15px 0; 
+          font-size: 14px;
+          text-indent: 3em;
+          color: @color-default;
+          background: url(../images/ico/gift.png) no-repeat;
+        }
+        .build-desc {
+          margin: 8px 0;
+          // height: 40px;
+          line-height: 20px;
+          font-size: 12px;
+          overflow: hidden;
+          // white-space: nowrap;
+          text-overflow: ellipsis;
+          color: gray;
+        }
+        .house-type {
+          margin: 5px 0;
+          .house-type-item {
+            margin-right: 15px;
+            color: gray;
+            a{
+              font-style: normal;
+              color: @color-main;
+            }
+          }
+          i {
+            font-style: normal;
+            color: @color-main;
+          }
+        }
+        .house-type-info {
+          margin: 5px 0;
+          .house-type-info-item {
+            margin-right: 15px;
+            color: gray;
+          }
+        }
+        .address {
+          clear: both;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          & .adress-detail {
+            color: gray;
+          }
+        }
+      }
+      .build-operation-box {
+        .build-price,
+        .delete-record,
+        .tel {
+          font-size: 16px;
+          text-align: right;
+        }
+        .build-price {
+          margin-top: 5px;
+          .striking {
+            & i {
+              font-size: 14px;
+              font-style: normal;
+            }
+            font-size: 20px;
+            font-weight: bold;
+            color: @color-default;
+          }
+        }
+        .total-price,
+        .average-price,
+        .source,
+        .release {
+          text-align: right;
+        }
+        .total-price {
+          .striking {
+            font-size: 20px;
+            font-weight: bold;
+            color: @color-default;
+          }
+          .rmb {
+            font-size: 16px;
+          }
+        }
+        .average-price {
+          margin: 10px 0;
+          font-size: 14px;
+          color: gray;
+        }
+        .delete-record {
+          height: 38px;
+          margin: 60px 0 10px;
+          &.second-hand {
+            margin: 35px 0 10px;
+          }
+          &.exclusive {
+            margin: 80px 0 10px;
+          }
+          // .btn-delete {
+          //   // display: inline-block;
+          //   // zoom: 1;
+          //   *display: inline;
+          //   // height: 100%;
+          //   height: 18px;
+          //   line-height: 18px;
+          //   padding: 9px 22px;
+          //   // border: 1px solid @color-main;
+          //   border-radius: 5px;
+          //   font-size: 16px;
+          //   // color: @color-main;
+          //   // cursor: pointer;
+          //   // &:hover {
+          //   //   color: @color-white;
+          //   //   background-color: @color-main;
+          //   // }
+          // }
+          .btn-delete{
+            position: static;
+            height: 18px;
+            line-height: 18px;
+            padding: 9px 22px;
+            border-radius: 5px;
+            .font(16);
+          }
+        }
+        .tel {
+          font-size: 14px;
+          color: @color-main;
+        }
+        .source,
+        .release {
+          color: @color-main;
+          .edit-time {
+            margin-left: 5px;
+            color: gray;
+          }
+        }
+      }
+
+  /*---------------------------------------*\
+    @pagination
+    @function: 分页(从新房组件继承)
+  \*---------------------------------------*/
+  .pagination {
+    // padding: 110px 0 50px;
+    // padding: 20px 0 50px;
+    padding: 50px 0;
+    font-size: 16px;
+    text-align: center;
+    .page {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;      
+      li.cur,
+      li:hover {
+        background-color: @color-main;
+      }
+    }
+  }
+
+// 20160302 shunzizhan 
+// 我的关注 户型-》热销楼盘
+.house-type{
+  line-height: 25px;
+  // height: auto;
+  // overflow: hidden;
+  position: relative;
+  .house-type-title{
+    float: left;
+  }
+  ul {
+    float: left;
+    li{
+      float: left;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .arrow{
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      height: 8px;
+      width: 8px;
+      background: url('../images/ico/arrow.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      top:50%;
+      margin-top: -3px;
+      right: 0px;
+      .rotate(0);
+      .transition(transform,.2s);
+    }
+    &:hover::after{
+      .rotate(180deg);
+    }
+  }
+  .house-list{
+    display: none;
+    position: absolute;
+    border:1px solid @color-gray;
+    background: @color-white;
+    left: 53px;
+    top: 20px;
+    z-index: 999;
+    padding:10px 15px;
+    line-height: 25px;
+    text-align: left;
+    li{
+      margin: 0 8px;
+    }
+  }
+}
+
+
