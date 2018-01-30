@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #div1{
+      width: 480px;
+      height: 120px;
+      margin: 100px auto;
+      background-color: #646464;
+      position: relative;
+      overflow: hidden;
+    }
+    #div1 ul{
+      position:absolute;
+      left:0;
+      top:0;
+      overflow: hidden;
+      background-color: #3b7796;
+    }
+ 
+    #div1 ul li{
+      float: left;
+      width: 160px;
+      height: 120px;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+    <ul id="ul1">
+      <li style="background: red;"></li>
+      <li style="background: blue;"></li>
+      <li style="background: yellow;"></li>
+    </ul>
+  </div>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    var oUl = document.getElementById('ul1');
+    var speed = 2;//初始化速度
+
+    oUl.innerHTML += oUl.innerHTML;//复制li的内容
+    oUl.style.width = $('li').length*160+'px';//设置ul的宽度使图片可以放下
+
+     function move(){
+        if(oUl.offsetLeft > 0){//向右滚动，当靠右的图1移出边框时
+          oUl.style.left = -(oUl.offsetWidth/2)+'px';
+        }
+        oUl.style.left = oUl.offsetLeft + speed + 'px';
+     }
+     var timer = setInterval(move,30);//全局变量 ，保存返回的定时器
+     $("#div1").mouseout(function(){
+        timer = setInterval(move,30);
+     })
+     $("#div1").mousemove(function(){
+        clearInterval(timer);//鼠标移入清除定时器
+     })
+})
+  </script>
+</html>
